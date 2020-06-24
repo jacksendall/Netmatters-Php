@@ -107,7 +107,7 @@ body {
     p {
         color: white;
         font-size: 0.875rem;
-        @media screen and (max-width: 702px){
+        @media screen and (max-width: 702px) {
             font-size: 0.5rem;
             margin: 0;
             line-height: 1.8;
@@ -714,6 +714,16 @@ header {
     border-color: $btn;
     &:hover {
         background-color: $btn-alt;
+    }
+}
+
+.btn-dark-nm {
+    color: white;
+    background-color: $nm-dark;
+    border-color: $nm-dark;
+    &:hover {
+        background-color: $nm-darker;
+        color: white;
     }
 }
 
@@ -1675,5 +1685,68 @@ footer {
     }
     .accreditations {
         display: block;
+    }
+}
+
+.contact-us-form {
+    h1 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        color: black;
+        font-size: 34px;
+    }
+    .form-group {
+        text-align: left;
+        p {
+            line-height: 0;
+            font-weight: 600;
+            color: black;
+            font-size: 16px;
+            &::after {
+                content: ' *';
+                color: tomato;
+            }
+        }
+        input {
+            height: 47px;
+            padding: 5px 15px;
+            width: 100%;
+        }
+        input[type=checkbox] {
+            height: 30px;
+            width: 30px;
+            padding: 5px 15px;
+        }
+        .inline-checkbox {
+            display: inline;
+            line-break: none;
+            margin: 12px;
+            &::after {
+                content: '';
+            }
+        }
+    }
+    .form-return {
+        // color: white;
+        padding: 10px 0;
+        button {
+            background: none;
+            border: none;
+            float: right;
+            margin-bottom: 5px;
+        }
+        margin-bottom: 16px;
+    }
+    .success {
+        background-color: lawngreen;
+        border: 1px solid green;
+    }
+    .error {
+        background-color: tomato;
+        border: 1px solid red;
+        color: white;
+    }
+    .hide {
+        display: none;
     }
 }
